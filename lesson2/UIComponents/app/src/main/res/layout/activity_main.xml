@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view"
+                android:id="@+id/textView"
+                android:textSize="14pt"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ff0000"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:id="@+id/pushButton"
+                android:layout_gravity="center_horizontal"/>
+
+            <ImageButton
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_launcher_background"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_weight="0.11"/>
+
+            <ProgressBar
+                android:layout_width="228dp"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleLarge"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center_horizontal"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_gravity="center_horizontal"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_gravity="center_horizontal"
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
