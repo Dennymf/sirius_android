@@ -16,8 +16,8 @@ public class ChangeTextActivity extends AppCompatActivity {
     private EditText editText;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.set_text);
         editText = findViewById(R.id.editText);
         findViewById(R.id.saveText).setOnClickListener(new View.OnClickListener() {
