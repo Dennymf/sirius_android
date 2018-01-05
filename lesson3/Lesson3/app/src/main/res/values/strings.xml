@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lesson3</string>
+    <string name="show_dialog">Show dialog</string>
+    <string name="mail_ru">Открыть mail.ru</string>
+    <string name="goToFragments">Перейти к фрагментам</string>
+    <string name="changeText">Изменить текст</string>
+    <string name="defaultText">Какой-то текст</string>
+    <string name="saveText">Сохранить текст</string>
+</resources>
