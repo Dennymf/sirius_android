@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="4"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_column="3"
+            android:text="/" />
+        <Button android:text="1" />
+        <Button android:text="2" />
+        <Button android:text="3" />
+        <Button android:text="*" />
+        <Button android:text="4" />
+        <Button android:text="5" />
+        <Button android:text="6" />
+        <Button android:text="-" />
+        <Button android:text="7" />
+        <Button android:text="8" />
+        <Button android:text="9" />
+        <Button
+            android:layout_gravity="fill"
+            android:layout_rowSpan="3"
+            android:text="+" />
+
+        <Button
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:text="0" />
+        <Button android:text="00" />
+        <Button
+            android:layout_gravity="fill"
+            android:layout_columnSpan="3"
+            android:text="=" />
+    </GridLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="30"
+        android:gravity="center_vertical">
+        <TableRow android:gravity="center_horizontal">
+            <TextView android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="column1"
+                android:layout_margin="1dp"
+                android:padding="10dp"
+                android:background="#ccc"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:id="@+id/textView2"
+                android:padding="10dp"
+                android:layout_margin="1dp"
+                android:background="#ccc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="column2"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_margin="1dp"
+                android:padding="10dp"
+                android:background="#ccc"
+                android:layout_height="wrap_content"
+                android:text="column 3"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:gravity="center_horizontal" >
+            <TextView
+                android:id="@+id/textViewSpan"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="span three column"
+                android:gravity="center"
+                android:layout_margin="1dp"
+                android:padding="10dp"
+                android:background="#ccc"
+                android:layout_span = "3"
+                android:textSize="23sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+        <TableRow android:gravity="center_horizontal" >
+            <Button
+                android:id="@+id/backbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:layout_span = "2"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Empty"
+                android:layout_span = "2"/><!-- 3-2=1 => займётся всего 1 -->
+        </TableRow>
+                />
+    </TableLayout>
+</LinearLayout>
