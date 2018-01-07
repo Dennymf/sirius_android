@@ -34,6 +34,12 @@
         android:id="@+id/loaderTextView"
         android:text="Loader" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/asyncLoaderTextView"
+        android:text="AsyncLoader" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

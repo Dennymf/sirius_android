@@ -4,10 +4,10 @@ import android.app.LoaderManager;
 import android.content.Loader;
 import android.database.ContentObserver;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -17,12 +17,14 @@ import java.util.TimerTask;
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
     private final static String LOG_TAG = "myLog";
     private final static int LOADER_ID = 1;
+    private final static int ASYNC_LOADER_ID = 2;
 
     private TextView postTextView;
     private TextView activityTextView;
     private TextView handlerTextView;
     private TextView asyncTextView;
     private TextView loaderTextView;
+    private TextView asyncLoaderTextView;
     private int postCounter;
     private int activityCounter;
 
@@ -52,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         asyncTextView = findViewById(R.id.asyncTextView);
         new AsyncTaskExample(1).execute();
 
-
         loaderTextView = findViewById(R.id.loaderTextView);
         Bundle bundle = new Bundle();
         Loader loader = getLoaderManager().initLoader(LOADER_ID, bundle, this);
@@ -63,6 +64,18 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             public void run() {
                 Log.d(LOG_TAG, "Data changed");
                 observer.dispatchChange(true, null);
+            }
+        }, 1000, 10000);
+
+        asyncLoaderTextView = findViewById(R.id.asyncLoaderTextView);
+        bundle = new Bundle();
+        Loader asyncLoader = getLoaderManager().initLoader(ASYNC_LOADER_ID, bundle, this);
+        final ContentObserver asyncObserver = asyncLoader.new ForceLoadContentObserver();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                Log.d(LOG_TAG, "Data changed");
+                asyncObserver.dispatchChange(true, null);
             }
         }, 1000, 10000);
     }
@@ -221,6 +234,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             loader = new LoaderExample(this);
             Log.d(LOG_TAG, "onCreateLoader()");
         }
+        if (id == ASYNC_LOADER_ID) {
+            loader = new AsyncLoaderExample(this);
+            Log.d(LOG_TAG, "Async onCreateLoader()");
+        }
         return loader;
     }
 
@@ -229,6 +246,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Log.d(LOG_TAG, "onLoadFinished() -> " + result);
         if (loader.getId() == LOADER_ID) {
             loaderTextView.setText(result);
+        }
+        if (loader.getId() == ASYNC_LOADER_ID) {
+            asyncLoaderTextView.setText(result);
         }
     }
 
