@@ -28,6 +28,12 @@
         android:id="@+id/asyncTextView"
         android:text="AsyncTask" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loaderTextView"
+        android:text="Loader" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

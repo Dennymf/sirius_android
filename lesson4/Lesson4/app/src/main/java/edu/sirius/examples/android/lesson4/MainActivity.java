@@ -1,21 +1,28 @@
 package edu.sirius.examples.android.lesson4;
 
+import android.app.LoaderManager;
+import android.content.Loader;
+import android.database.ContentObserver;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
+    private final static String LOG_TAG = "myLog";
+    private final static int LOADER_ID = 1;
 
     private TextView postTextView;
     private TextView activityTextView;
     private TextView handlerTextView;
     private TextView asyncTextView;
+    private TextView loaderTextView;
     private int postCounter;
     private int activityCounter;
 
@@ -44,6 +51,20 @@ public class MainActivity extends AppCompatActivity {
 
         asyncTextView = findViewById(R.id.asyncTextView);
         new AsyncTaskExample(1).execute();
+
+
+        loaderTextView = findViewById(R.id.loaderTextView);
+        Bundle bundle = new Bundle();
+        Loader loader = getLoaderManager().initLoader(LOADER_ID, bundle, this);
+        final ContentObserver observer = loader.new ForceLoadContentObserver();
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                Log.d(LOG_TAG, "Data changed");
+                observer.dispatchChange(true, null);
+            }
+        }, 1000, 10000);
     }
 
     class PostWorkingClass implements Runnable {
@@ -191,5 +212,28 @@ public class MainActivity extends AppCompatActivity {
             }
             return 42;
         }
+    }
+
+    @Override
+    public Loader<String> onCreateLoader(int id, Bundle args) {
+        Loader<String> loader = null;
+        if (id == LOADER_ID) {
+            loader = new LoaderExample(this);
+            Log.d(LOG_TAG, "onCreateLoader()");
+        }
+        return loader;
+    }
+
+    @Override
+    public void onLoadFinished(Loader<String> loader, String result) {
+        Log.d(LOG_TAG, "onLoadFinished() -> " + result);
+        if (loader.getId() == LOADER_ID) {
+            loaderTextView.setText(result);
+        }
+    }
+
+    @Override
+    public void onLoaderReset(Loader<String> loader) {
+        Log.d(LOG_TAG, "onLoaderReset()");
     }
 }
