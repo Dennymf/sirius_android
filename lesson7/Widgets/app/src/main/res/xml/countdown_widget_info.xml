@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:autoAdvanceViewId="@id/countdown_textView"
+    android:configure="com.my.examples.countdownwidget.ConfigurationActivity"
+    android:initialLayout="@layout/countdown_widget"
+    android:minHeight="80dp"
+    android:minWidth="160dp"
+    android:minResizeHeight="60dp"
+    android:minResizeWidth="180dp"
+    android:previewImage="@mipmap/widget_preview"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="0" />
