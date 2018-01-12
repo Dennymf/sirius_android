@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notifications</string>
+    <string name="send_notification_1">Отправить простую нотификацию</string>
+    <string name="send_notification_2">Отправить нотификацию в группу</string>
+    <string name="send_notification_3">Отправить нотификацию с действием</string>
+    <string name="send_notification_4">Отправить нотификацию с индикатором прогресса</string>
+    <string name="send_notification_5">Отправить нотификацию с каналами</string>
+</resources>
