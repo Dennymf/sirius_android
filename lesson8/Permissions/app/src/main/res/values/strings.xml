@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Permissions</string>
+    <string name="pick_image">Получить картинку</string>
+    <string name="check_permission">Запросить разрешение</string>
+</resources>
