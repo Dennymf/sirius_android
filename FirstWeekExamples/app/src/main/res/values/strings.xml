@@ -1,0 +1,173 @@
+<resources>
+    <string name="app_name">Lection3</string>
+    <string name="select_action">Push a button</string>
+    <string name="action_settings">Settings</string>
+    <string name="chooser_title">Sample of a chooser</string>
+    <string name="threads_label">Treads Samples</string>
+    <string name="show_dialog">Show Dialog</string>
+    <string name="default_text">Text View</string>
+    <string name="hello_world">Hello from Loader!</string>
+    <string-array name="names">
+        <item>Аврора</item>
+        <item>Агата, Агафья</item>
+        <item>Агнесса</item>
+        <item>Агния</item>
+        <item>Ада</item>
+        <item>Аза</item>
+        <item>Алевтина</item>
+        <item>Александра</item>
+        <item>Алина</item>
+        <item>Алиса</item>
+        <item>Алла</item>
+        <item>Альбина</item>
+        <item>Альфреа</item>
+        <item>Анастасия</item>
+        <item>Ангелина</item>
+        <item>Анжелика, Анжела</item>
+        <item>Анита</item>
+        <item>Анна</item>
+        <item>Антонина</item>
+        <item>Анфиса</item>
+        <item>Арина</item>
+        <item>Астра</item>
+        <item>Беата</item>
+        <item>Белла</item>
+        <item>Берта</item>
+        <item>Бета</item>
+        <item>Богдана</item>
+        <item>Борислава</item>
+        <item>Бронислава</item>
+        <item>Валентина</item>
+        <item>Валерия</item>
+        <item>Ванда</item>
+        <item>Варвара</item>
+        <item>Василиса</item>
+        <item>Венера</item>
+        <item>Вера</item>
+        <item>Вероника</item>
+        <item>Веста</item>
+        <item>Виктория</item>
+        <item>Виолетта</item>
+        <item>Виталина, Виталия</item>
+        <item>Галина</item>
+        <item>Гелена</item>
+        <item>Гелла</item>
+        <item>Генриетта</item>
+        <item>Гертруда</item>
+        <item>Глафира</item>
+        <item>Глория</item>
+        <item>Дайна</item>
+        <item>Данута</item>
+        <item>Дарья</item>
+        <item>Джульета</item>
+        <item>Диана</item>
+        <item>Дина</item>
+        <item>Доля</item>
+        <item>Доминика</item>
+        <item>Ева</item>
+        <item>Евгения</item>
+        <item>Евдокия</item>
+        <item>Екатерина</item>
+        <item>Елена</item>
+        <item>Елизавета</item>
+        <item>Жанна</item>
+        <item>Зинаида</item>
+        <item>Зоя</item>
+        <item>Иветта</item>
+        <item>Изабелла</item>
+        <item>Изольда</item>
+        <item>Инара</item>
+        <item>Инга</item>
+        <item>Инесса</item>
+        <item>Инна</item>
+        <item>Ирина</item>
+        <item>Ирма</item>
+        <item>Ия</item>
+        <item>Камилла</item>
+        <item>Капитолина</item>
+        <item>Карина</item>
+        <item>Каролина</item>
+        <item>Катарина</item>
+        <item>Кира</item>
+        <item>Клавдия</item>
+        <item>Клара</item>
+        <item>Кристина</item>
+        <item>Ксения</item>
+        <item>Кузьма, Козьма</item>
+        <item>Лада</item>
+        <item>Лайма</item>
+        <item>Лариса</item>
+        <item>Леся</item>
+        <item>Лиана</item>
+        <item>Лидия</item>
+        <item>Лилия, Лилиана</item>
+        <item>Лина, Лиана</item>
+        <item>Лола, Лолла, Лолита</item>
+        <item>Людмила</item>
+        <item>Майя</item>
+        <item>Маргарита</item>
+        <item>Марианна</item>
+        <item>Марина</item>
+        <item>Мария</item>
+        <item>Марта</item>
+        <item>Марфа</item>
+        <item>Милена</item>
+        <item>Мирдза</item>
+        <item>Мирра</item>
+        <item>Муза</item>
+        <item>Надежда</item>
+        <item>Наталия</item>
+        <item>Неонила, Нила</item>
+        <item>Никита</item>
+        <item>Нина</item>
+        <item>Нонна</item>
+        <item>Нора</item>
+        <item>Оксана</item>
+        <item>Олеся</item>
+        <item>Ольга</item>
+        <item>Полина</item>
+        <item>Прасковья</item>
+        <item>Раиса</item>
+        <item>Регина, Рина</item>
+        <item>Рената</item>
+        <item>Римма</item>
+        <item>Роза, Розалия</item>
+        <item>Роксана</item>
+        <item>Руслана</item>
+        <item>Руфина</item>
+        <item>Савва</item>
+        <item>Сарра, Сара</item>
+        <item>Светлана</item>
+        <item>Серафима</item>
+        <item>София</item>
+        <item>Станислава</item>
+        <item>Стелла</item>
+        <item>Стефания</item>
+        <item>Сусанна, Сюзанна</item>
+        <item>Таира</item>
+        <item>Таисия</item>
+        <item>Тамара</item>
+        <item>Тамила, Томила</item>
+        <item>Татьяна</item>
+        <item>Ульяна</item>
+        <item>Фаина</item>
+        <item>Фекла</item>
+        <item>Флора</item>
+        <item>Фома</item>
+        <item>Франсуаза</item>
+        <item>Фрида</item>
+        <item>Христина</item>
+        <item>Эдита</item>
+        <item>Элеонора</item>
+        <item>Эллина, Эвелина, Элина</item>
+        <item>Эльвира</item>
+        <item>Эльза</item>
+        <item>Эмма, Эмилия</item>
+        <item>Эрика</item>
+        <item>Юлия</item>
+        <item>Юнона</item>
+        <item>Ядвига</item>
+        <item>Яна</item>
+        <item>Ярослава</item>
+    </string-array>
+</resources>
